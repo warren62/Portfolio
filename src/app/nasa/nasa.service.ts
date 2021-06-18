@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { filter, flatMap, map, mergeMap } from 'rxjs/operators';
+import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
+import { interval, Observable, throwError } from 'rxjs';
+import { catchError, filter, flatMap, map, mergeMap, take } from 'rxjs/operators';
 
 import { ApodImageResponse } from './models/apod-image-response';
 
@@ -21,15 +21,15 @@ export class NasaService {
   getAPODImageResponse(): Observable<ApodImageResponse[]> {
     return this.getAPODImage().pipe(
       filter(response => response.body !== null),
-      map(response => this.createAPODImageResponse(response.body))
-      // mergeMap, index => {
-      //   // const body = response.body ?? [];
-      //   // return body.map(value => {
-      //   //   return value;
-      //   // }
-      //   return array;
-      // })
+      map(response => this.createAPODImageResponse(response.body)),
+      catchError(err => this.handleError(err))
     );
+  }
+
+  // TODO: set up redux and dispatch fail action
+  handleError(error: HttpErrorResponse) {
+    console.error('APOD image error: ', error);
+    return throwError(error.message || 'APOD image api error.');
   }
 
   createAPODImageResponse(res: any): ApodImageResponse[] {
