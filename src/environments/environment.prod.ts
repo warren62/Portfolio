@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  nasaApiKey: 'OUglulkWhUypTytmdHNOa5V383PWM1woloIg3Nn6'
 };

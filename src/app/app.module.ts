@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './layout/layout.module';
 import { HomeComponent } from './views/home/home.component';
 import { AboutComponent } from './views/about/about.component';
+import { NasaModule } from './nasa/nasa.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AboutComponent } from './views/about/about.component';
     AboutComponent
   ],
   imports: [
+    NasaModule,
     LayoutModule,
     BrowserModule,
     AppRoutingModule,
