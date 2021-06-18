@@ -1,4 +1,4 @@
-<div class="jumbotron">
+<!-- <div class="jumbotron">
   <h1 class="display-4">NASA Astronomy Image Viewer!</h1>
   <p class="lead">
     These beautiful images are provided by NASA free of charge.
@@ -13,8 +13,8 @@
       >APOD GITHUB</a
     >
   </p>
-</div>
-<div class="container">
+</div> -->
+<div *ngIf="currentImage as image" class="container" [ngStyle]="{'background-image': 'url('+ currentImage.hdurl + ')'}">
   <!-- <div class="card" *ngFor="let image of apodImages$ | async">
     <img class="card-img-top" src="{{ image.url }}" alt="Card image cap" />
     <div class="card-body">
@@ -28,8 +28,8 @@
     </div>
   </div> -->
 
-  <div class="card" *ngIf="currentImage as image">
-    <img class="card-img-top" src="{{ image.url }}" alt="Card image cap" />
+  <!-- <div class="card" *ngIf="currentImage as image">
+    <img class="card-img-top" src="{{ image.hdurl }}" alt="Card image cap" />
     <div class="card-body">
       <h5 class="card-title">{{ image.title }}</h5>
       <p class="card-text">{{ image.explanation }}</p>
@@ -39,5 +39,5 @@
         >
       </p>
     </div>
-  </div>
+  </div> -->
 </div>
