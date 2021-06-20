@@ -7,6 +7,7 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { effects } from './store/effects';
 import { reducers } from './store/reducers';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   providers:[
@@ -18,6 +19,7 @@ import { reducers } from './store/reducers';
   imports: [
     HttpClientModule,
     CommonModule,
+    MaterialModule,
     StoreModule.forFeature('nasa', reducers),
     EffectsModule.forFeature(effects),
   ],

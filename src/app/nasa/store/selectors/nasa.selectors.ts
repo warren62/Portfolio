@@ -11,3 +11,13 @@ export const getRandomApod = createSelector(
   getCompleteNasaState,
   fromNasa.getApodImage
 );
+
+export const getLoading = createSelector(
+  getCompleteNasaState,
+  fromNasa.getApodImageLoading
+);
+
+export const getLoaded = createSelector(
+  getCompleteNasaState,
+  fromNasa.getApodImageLoaded
+);
