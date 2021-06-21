@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { MaterialModule } from '../material/material.module';
+import { MaterialModule } from './material/material.module';
 import { ShareButtonComponent } from './share-button/share-button.component';
 import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareButtonsPopupModule } from 'ngx-sharebuttons/popup';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+import { CardComponent } from './card/card.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
-    ShareButtonComponent
+    ShareButtonComponent,
+    CardComponent
   ],
   imports: [
     MaterialModule,
@@ -29,6 +31,7 @@ import { ShareIconsModule } from 'ngx-sharebuttons/icons';
     FooterComponent,
     SidebarComponent,
     ShareButtonComponent,
+    CardComponent
   ]
 })
 export class LayoutModule { }

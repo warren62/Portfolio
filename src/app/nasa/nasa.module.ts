@@ -7,7 +7,6 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { effects } from './store/effects';
 import { reducers } from './store/reducers';
-import { MaterialModule } from '../material/material.module';
 import { LayoutModule } from '../layout/layout.module';
 
 @NgModule({
@@ -20,7 +19,6 @@ import { LayoutModule } from '../layout/layout.module';
   imports: [
     HttpClientModule,
     CommonModule,
-    MaterialModule,
     LayoutModule,
     StoreModule.forFeature('nasa', reducers),
     EffectsModule.forFeature(effects),

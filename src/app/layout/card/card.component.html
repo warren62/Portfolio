@@ -1,0 +1,19 @@
+<mat-card *ngIf="cardModel as card">
+  <mat-card-header>
+    <mat-card-title>{{card.title}}</mat-card-title>
+    <mat-card-subtitle>{{card.subTitle}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content [@fadeIn] *ngIf="!loading">
+    <img mat-card-image src="{{card.imgUrl}}" alt="Error Photo">
+    <p>
+      {{card.description}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+
+    <app-share-button [url]="card.shareUrl || ''">
+
+    </app-share-button>
+  </mat-card-actions>
+</mat-card>
