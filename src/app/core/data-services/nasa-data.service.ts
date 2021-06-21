@@ -5,7 +5,7 @@ import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/htt
 import { Observable, throwError } from 'rxjs';
 import { catchError, filter, map, } from 'rxjs/operators';
 
-import { ApodImageResponse } from './models/apod-image-response';
+import { ApodImageResponse } from '../../nasa/models/apod-image-response';
 
 @Injectable({
   providedIn: 'root'

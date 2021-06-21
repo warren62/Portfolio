@@ -4,7 +4,7 @@ import { map, catchError, switchMap } from 'rxjs/operators';
 import { of } from 'rxjs';
 
 import * as nasaActions from '../actions/nasa.actions';
-import { NasaDataService } from '../../nasa-data.service';
+import { NasaDataService } from '../../../core/data-services/nasa-data.service';
 
 @Injectable()
 export class NasaEffects {
