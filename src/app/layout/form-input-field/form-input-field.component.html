@@ -1,4 +1,11 @@
-<mat-form-field>
-  <input matInput placeholder="Enter your email" [formControl]="formControl" required>
-  <mat-error *ngIf="formControl.invalid">{{errorMessage}}</mat-error>
+<mat-form-field appearance="fill">
+
+  <mat-label>{{label}}</mat-label>
+  <input *ngIf="type === 'input';else textarea" matInput placeholder="{{placeholder}}" [formControl]="control">
+
+  <ng-template #textarea>
+    <textarea matInput placeholder="{{placeholder}}" [formControl]="control"></textarea>
+  </ng-template>
+
+  <mat-error *ngIf="control.invalid">{{errorMessage}}</mat-error>
 </mat-form-field>

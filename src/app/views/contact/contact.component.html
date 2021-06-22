@@ -1,0 +1,53 @@
+<form class="contact" [formGroup]="form" method="post" (ngSubmit)="onSubmit()">
+  <p class="h4 mb-4">Contact me</p>
+
+  <app-form-input-field
+    [control]="form.get('name')"
+    [placeholder]="'Enter your name'"
+    [errorMessage]="'Name is required'"
+    [label]="'Name'"
+  >
+  </app-form-input-field>
+
+  <app-form-input-field
+    [control]="form.get('email')"
+    [placeholder]="'Enter a valid email'"
+    [errorMessage]="'Email is required'"
+    [label]="'Email'"
+  >
+  </app-form-input-field>
+
+  <app-form-input-field
+    [control]="form.get('message')"
+    [type]="'textarea'"
+    [placeholder]="'Enter a message'"
+    [errorMessage]="'Message is required'"
+    [label]="'Message'"
+  >
+  </app-form-input-field>
+
+  <app-form-select
+    [label]="'Subject'"
+    [options]="[
+      {
+        label: 'Feedback',
+        value: 0
+      },
+      {
+        label: 'Report a bug',
+        value: 1
+      },
+      {
+        label: 'Other',
+        value: 2
+      }
+    ]"
+  >
+  </app-form-select>
+
+  <mat-checkbox formControlName="sendCopyToSelf" class="example-margin"
+    >Send a copy to myself?</mat-checkbox
+  >
+
+  <button [disabled]="isLoading" class="submit" type="submit">Submit</button>
+</form>

@@ -12,7 +12,7 @@ export const fadeIn = trigger('fadeIn', [
 ])
 
 export const routeTransitionAnimations = trigger('routeTransition', [
-	transition('Home => About', [
+	transition('Home => About, About => Contact, Home => Contact', [
 		style({ position: 'relative' }),
 		query(':enter, :leave', [
 			style({
@@ -30,7 +30,7 @@ export const routeTransitionAnimations = trigger('routeTransition', [
 		]),
 		query(':enter', animateChild())
 	]),
-	transition('About => Home', [
+	transition('Contact => About, About => Home, Contact => Home', [
 		style({ position: 'relative' }),
 		query(':enter, :leave', [
 			style({

@@ -12,6 +12,8 @@ import { CardComponent } from './card/card.component';
 import { CoreModule } from '../core/core.module';
 import { FormInputFieldComponent } from './form-input-field/form-input-field.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormSelectComponent } from './form-select/form-select.component';
 
 
 
@@ -23,7 +25,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SidebarComponent,
     ShareButtonComponent,
     CardComponent,
-    FormInputFieldComponent
+    FormInputFieldComponent,
+    FormSelectComponent
   ],
   imports: [
     CoreModule,
@@ -36,11 +39,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule
   ],
   exports: [
+    FormsModule,
+    ReactiveFormsModule,
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
     ShareButtonComponent,
-    CardComponent
+    CardComponent,
+    FormInputFieldComponent,
+    // no need for custom component here
+    MatCheckboxModule,
+    FormSelectComponent
   ]
 })
 export class LayoutModule { }

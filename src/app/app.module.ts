@@ -15,6 +15,7 @@ import { HomeComponent } from './views/home/home.component';
 import { AboutComponent } from './views/about/about.component';
 import { NasaModule } from './nasa/nasa.module';
 import { CoreModule } from './core/core.module';
+import { ContactComponent } from './views/contact/contact.component';
 
 
 
@@ -22,7 +23,8 @@ import { CoreModule } from './core/core.module';
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     NasaModule,

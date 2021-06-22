@@ -8,6 +8,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [],
@@ -19,6 +22,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatSidenavModule,
     MatDividerModule,
     MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatSelectModule,
     CommonModule
   ],
   exports: [
@@ -28,7 +34,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatIconModule,
     MatSidenavModule,
     MatDividerModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule { }
