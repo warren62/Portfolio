@@ -16,6 +16,9 @@ import { AboutComponent } from './views/about/about.component';
 import { NasaModule } from './nasa/nasa.module';
 import { CoreModule } from './core/core.module';
 import { ContactComponent } from './views/contact/contact.component';
+import { SkillsComponent } from './views/skills/skills.component';
+import { ExperienceComponent } from './views/experience/experience.component';
+import { ProjectsComponent } from './views/projects/projects.component';
 
 
 
@@ -24,7 +27,10 @@ import { ContactComponent } from './views/contact/contact.component';
     AppComponent,
     HomeComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    SkillsComponent,
+    ExperienceComponent,
+    ProjectsComponent
   ],
   imports: [
     NasaModule,
