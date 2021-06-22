@@ -42,8 +42,8 @@ export class EmailDataService {
   }
 
   handleError(error: HttpErrorResponse) {
-    console.error('File upload error: ', error);
-    return throwError(error.message || 'File upload server error.');
+    console.error('Email data service error: ', error);
+    return throwError(error.message || 'Email data service server error.');
   }
 
 }
