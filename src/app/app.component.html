@@ -1,8 +1,13 @@
-<app-header>
+<app-header (onMenuClick)="sidebar.toggle()">
 
 </app-header>
 
-<router-outlet id="router"></router-outlet>
+<app-sidebar #sidebar>
+<div [@routeTransition]="prepareRoute(outlet)">
+<router-outlet #outlet="outlet"></router-outlet>
+</div>
+
+</app-sidebar>
 
 <app-footer>
 

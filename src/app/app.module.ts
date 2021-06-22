@@ -8,13 +8,13 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { LayoutModule } from './layout/layout.module';
 import { HomeComponent } from './views/home/home.component';
 import { AboutComponent } from './views/about/about.component';
 import { NasaModule } from './nasa/nasa.module';
+import { CoreModule } from './core/core.module';
 
 
 
@@ -28,7 +28,7 @@ import { NasaModule } from './nasa/nasa.module';
     NasaModule,
     LayoutModule,
     BrowserModule,
-    AppRoutingModule,
+    CoreModule,
     BrowserAnimationsModule,
     StoreModule.forRoot({}, {
       runtimeChecks: {

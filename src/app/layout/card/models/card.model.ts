@@ -2,6 +2,7 @@ export class Card {
   title: string | null = '';
   subTitle: string | null = '';
   description: string | null = '';
-  imgUrl: string | null = '';
-  shareUrl: string | null = this.imgUrl;
+  url: string | null = '';
+  shareUrl: string | null = this.url;
+  type: string | null = 'image'
 }

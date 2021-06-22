@@ -5,8 +5,8 @@ import { HomeComponent } from './views/home/home.component';
 
 const routes: Routes = [
   { path: '',   redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
-  { path: 'about', component: AboutComponent }
+  { path: 'home', component: HomeComponent, data: { animationState: 'Home' } },
+  { path: 'about', component: AboutComponent, data: { animationState: 'About' } }
 ];
 
 @NgModule({

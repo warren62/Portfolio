@@ -2,11 +2,12 @@
   *ngIf="apodImage$ | async as apod"
   [loading]="(loading$ | async) || false"
   [cardModel]="{
-    title: 'NASA Astronomy Pictutre Of the Day ' + apod.date,
+    title: 'NASA Astronomy Picture Of the Day ' + apod.date,
     subTitle: apod.title,
     description: apod.explanation,
-    imgUrl: apod.hdurl,
-    shareUrl: apod.hdurl
+    url: apod.media_type !== 'video' ? apod.hdurl : apod.url,
+    shareUrl: apod.hdurl,
+    type: apod.media_type
   }"
 >
 </app-card>

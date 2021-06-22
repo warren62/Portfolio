@@ -5,10 +5,20 @@
   </mat-card-header>
 
   <mat-card-content [@fadeIn] *ngIf="!loading">
-    <img mat-card-image src="{{card.imgUrl}}" alt="Error Photo">
+
+    <div *ngIf="card.type !== 'video';else video">
+      <img mat-card-image src="{{card.url}}" alt="Error Photo">
     <p>
       {{card.description}}
     </p>
+  </div>
+
+  <ng-template #video>
+    <iframe src="{{card.url | safe}}" frameborder="0" allowfullscreen></iframe>
+    <!-- <iframe class="embed-responsive-item"  allowfullscreen></iframe> -->
+  </ng-template>
+
+
   </mat-card-content>
   <mat-card-actions>
 
