@@ -27,6 +27,7 @@
   </app-form-input-field>
 
   <app-form-select
+    [control]="form.get('subject')"
     [label]="'Subject'"
     [options]="[
       {
@@ -49,5 +50,5 @@
     >Send a copy to myself?</mat-checkbox
   >
 
-  <button [disabled]="isLoading" class="submit" type="submit">Submit</button>
+  <button [disabled]="(loading$ | async) || !form.valid" class="submit" type="submit">Submit</button>
 </form>
