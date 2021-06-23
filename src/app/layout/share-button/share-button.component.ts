@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ShareButtonComponent implements OnInit {
 
   @Input() url: string = '';
+  @Input() theme: string = 'modern-light';
   shareButtonActive: boolean = true;
 
   constructor() { }

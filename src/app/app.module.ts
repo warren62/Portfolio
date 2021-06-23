@@ -19,6 +19,8 @@ import { ContactComponent } from './views/contact/contact.component';
 import { SkillsComponent } from './views/skills/skills.component';
 import { ExperienceComponent } from './views/experience/experience.component';
 import { ProjectsComponent } from './views/projects/projects.component';
+import { ExperienceCardComponent } from './views/experience/components/experience-card/experience-card.component';
+import { ExperienceCardViewComponent } from './views/experience/components/experience-card-view/experience-card-view.component';
 
 
 
@@ -30,7 +32,9 @@ import { ProjectsComponent } from './views/projects/projects.component';
     ContactComponent,
     SkillsComponent,
     ExperienceComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ExperienceCardComponent,
+    ExperienceCardViewComponent
   ],
   imports: [
     NasaModule,

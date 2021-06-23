@@ -14,6 +14,9 @@ import { FormInputFieldComponent } from './form-input-field/form-input-field.com
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormSelectComponent } from './form-select/form-select.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { CardViewComponent } from './card-view/card-view.component';
+import { MatChip, MatChipList } from '@angular/material/chips';
 
 
 
@@ -26,7 +29,8 @@ import { FormSelectComponent } from './form-select/form-select.component';
     ShareButtonComponent,
     CardComponent,
     FormInputFieldComponent,
-    FormSelectComponent
+    FormSelectComponent,
+    CardViewComponent
   ],
   imports: [
     CoreModule,
@@ -36,6 +40,7 @@ import { FormSelectComponent } from './form-select/form-select.component';
     ShareButtonsModule,
     ShareButtonsPopupModule,
     ShareIconsModule,
+    FlexLayoutModule,
     CommonModule
   ],
   exports: [
@@ -49,7 +54,11 @@ import { FormSelectComponent } from './form-select/form-select.component';
     FormInputFieldComponent,
     // no need for custom component here
     MatCheckboxModule,
-    FormSelectComponent
+    FormSelectComponent,
+    MatChipList,
+    MatChip,
+    FlexLayoutModule,
+    CardViewComponent
   ]
 })
 export class LayoutModule { }

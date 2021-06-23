@@ -1,0 +1,15 @@
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let card of cardModels">
+      <app-card [cardModel]="{
+        title: card.title,
+        subTitle: card.subtitle,
+        description: card.description,
+        url: card.url,
+        shareUrl: card.shareUrl
+      }">
+      </app-card>
+    </div>
+  </div>
+  </div>

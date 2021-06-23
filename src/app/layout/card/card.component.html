@@ -1,25 +1,29 @@
-<mat-card *ngIf="cardModel as card">
+<mat-card *ngIf="cardModel as card" class="mat-elevation-z4">
   <mat-card-header>
     <mat-card-title>{{card.title}}</mat-card-title>
     <mat-card-subtitle>{{card.subTitle}}</mat-card-subtitle>
   </mat-card-header>
+  <div [@fadeIn] *ngIf="!loading">
+    <div *ngIf="card.url">
+      <div *ngIf="card.type !== 'video';else video">
+        <img mat-card-image src="{{card.url}}" alt="Error Photo">
+      </div>
 
-  <mat-card-content [@fadeIn] *ngIf="!loading">
+      <ng-template #video>
+        <iframe src="{{card.url | safe}}" frameborder="0" allowfullscreen></iframe>
+        <!-- <iframe class="embed-responsive-item"  allowfullscreen></iframe> -->
+      </ng-template>
+    </div>
 
-    <div *ngIf="card.type !== 'video';else video">
-      <img mat-card-image src="{{card.url}}" alt="Error Photo">
-    <p>
-      {{card.description}}
-    </p>
+    <ng-content></ng-content>
+
+    <mat-card-content>
+      <div [innerHTML]="card.description">
+
+      </div>
+    </mat-card-content>
   </div>
 
-  <ng-template #video>
-    <iframe src="{{card.url | safe}}" frameborder="0" allowfullscreen></iframe>
-    <!-- <iframe class="embed-responsive-item"  allowfullscreen></iframe> -->
-  </ng-template>
-
-
-  </mat-card-content>
   <mat-card-actions>
 
     <app-share-button [url]="card.shareUrl || ''">
