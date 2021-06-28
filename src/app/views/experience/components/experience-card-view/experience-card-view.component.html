@@ -1,0 +1,12 @@
+<div>
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div
+      fxFlex="25%"
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let card of cards"
+    >
+      <app-experience-card [card]="card"> </app-experience-card>
+    </div>
+  </div>
+</div>

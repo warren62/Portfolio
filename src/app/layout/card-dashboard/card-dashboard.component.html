@@ -1,0 +1,15 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard {{loading}}</h1>
+  <app-spinner style="display: flex; justify-content: center; align-items: center;" [show]="loading">
+
+  </app-spinner>
+    <mat-grid-list *ngIf="!loading" cols="{{ cols }}" rowHeight="400px">
+      <mat-grid-tile
+        *ngFor="let card of cards"
+        [colspan]="colspan"
+        [rowspan]="rowspan"
+      >
+        <app-card-image-viewer [cardModel]="card"> </app-card-image-viewer>
+      </mat-grid-tile>
+    </mat-grid-list>
+</div>

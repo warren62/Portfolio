@@ -1,0 +1,32 @@
+<ng-container *ngIf="shareButtonActive; else shareButtons">
+  <button mat-button (click)="shareButtonActive = !shareButtonActive">
+    SHARE
+  </button>
+</ng-container>
+<ng-template #shareButtons>
+  <share-buttons
+    [theme]="theme"
+    [include]="[
+      'facebook',
+      'twitter',
+      'linkedin',
+      'pinterest',
+      'reddit',
+      'tumblr',
+      'vk',
+      'telegram',
+      'messenger',
+      'whatsapp',
+      'sms',
+      'email',
+      'print',
+      'copy'
+    ]"
+    [show]="5"
+    [url]="url"
+    [autoSetMeta]="false"
+  ></share-buttons>
+  <button mat-icon-button (click)="shareButtonActive = true">
+    <mat-icon>undo</mat-icon>
+  </button>
+</ng-template>
