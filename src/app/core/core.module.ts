@@ -5,12 +5,10 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { EmailModule } from './email/email.module';
-import { FullscreenDirective } from './directives/fullscreen.directive';
 
 @NgModule({
   declarations: [
-    SafePipe,
-    FullscreenDirective
+    SafePipe
   ],
   imports: [
     CommonModule,
@@ -21,8 +19,7 @@ import { FullscreenDirective } from './directives/fullscreen.directive';
     EmailModule,
     RouterOutlet,
     RouterLink,
-    SafePipe,
-    FullscreenDirective
+    SafePipe
   ],
   providers:[DatePipe, SafePipe]
 })

@@ -528,7 +528,7 @@ export class SkillsComponent implements OnInit {
       description:
         `<ul>
             <li>2+ years working on Angular SPA's primarily for EZfacility</li>
-            <li>Rxjs, Redux, Ngrx, Observables, etc.</li>
+            <li>Rxjs, Redux, Ngrx, Observables, Schematics etc.</li>
         </ul>`,
       shareUrl: '',
       type: '',
@@ -541,6 +541,10 @@ export class SkillsComponent implements OnInit {
       projectChips: [
         {
           label: 'EZUI',
+          routerLink: '/projects'
+        },
+        {
+          label: 'EZ Schematics',
           routerLink: '/projects'
         },
         {

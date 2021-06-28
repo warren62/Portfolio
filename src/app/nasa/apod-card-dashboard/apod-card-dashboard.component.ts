@@ -30,6 +30,7 @@ export class ApodCardDashboardComponent implements OnInit {
             subTitle: value.copyright,
             description: value.explanation,
             url: value.hdurl ?? value.url,
+            thumbnailUrl: value.url,
             shareUrl: value.hdurl ?? value.url,
             type: value.media_type,
           }
