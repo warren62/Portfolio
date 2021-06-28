@@ -5,9 +5,6 @@ import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MaterialModule } from './material/material.module';
 import { ShareButtonComponent } from './share-button/share-button.component';
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-import { ShareButtonsPopupModule } from 'ngx-sharebuttons/popup';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 import { CardComponent } from './card/card.component';
 import { CoreModule } from '../core/core.module';
 import { FormInputFieldComponent } from './form-input-field/form-input-field.component';
@@ -58,9 +55,6 @@ import { SpinnerComponent } from './spinner/spinner.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    ShareButtonsModule,
-    ShareButtonsPopupModule,
-    ShareIconsModule,
     FlexLayoutModule,
     AccordionModule,
     AlertModule,
