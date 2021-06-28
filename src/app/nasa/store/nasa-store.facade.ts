@@ -15,10 +15,14 @@ export class NasaStoreFacade {
   constructor(private store: Store<fromReducers.NasaState>) {}
 
   getNewApod() {
-    this.store.dispatch(fromActions.getNewAPOD());
+    this.store.dispatch(fromActions.getNewApod());
   }
 
   getApods(apodRequest: ApodRequest) {
-    this.store.dispatch(fromActions.getAPODs(apodRequest));
+    this.store.dispatch(fromActions.getApods(apodRequest));
+  }
+
+  appendApods(apodRequest: ApodRequest) {
+    this.store.dispatch(fromActions.appendApods(apodRequest));
   }
 }

@@ -20,7 +20,7 @@ export class NasaDataService {
 
   constructor(private http_client: HttpClient, public datepipe: DatePipe) { }
 
-  getAPODImage(apodRequest: ApodRequest): Observable<HttpResponse<ApodImageResponse[]>> {
+  getApodImage(apodRequest: ApodRequest): Observable<HttpResponse<ApodImageResponse[]>> {
     let url = this.nasa_url;
 
     // cant use both count and start
@@ -35,32 +35,32 @@ export class NasaDataService {
     return this.http_client.get<ApodImageResponse[]>(url, { observe: 'response' });
   }
 
-  getAPODImageResponse(count: number = 1): Observable<ApodImageResponse[]> {
-    return this.getAPODImage({ count: count }).pipe(
+  getApodImageResponse(count: number = 1): Observable<ApodImageResponse[]> {
+    return this.getApodImage({ count: count }).pipe(
       filter(response => response.body !== null),
-      map(response => this.createAPODImageResponse(response.body)),
+      map(response => this.createApodImageResponse(response.body)),
       catchError(err => this.handleError(err))
     );
   }
 
-  getAPODs(apodRequest: ApodRequest): Observable<ApodImageResponse[]> {
-    return this.getAPODImage({
+  getApods(apodRequest: ApodRequest): Observable<ApodImageResponse[]> {
+    return this.getApodImage({
       count: apodRequest.count,
       start: apodRequest.start,
       end: apodRequest.end
     }).pipe(
       filter(response => response.body !== null),
-      map(response => this.createAPODImageResponse(response.body)),
+      map(response => this.createApodImageResponse(response.body)),
       catchError(err => this.handleError(err))
     );
   }
 
   handleError(error: HttpErrorResponse) {
-    console.error('APOD image error: ', error);
-    return throwError(error.message || 'APOD image data service error.');
+    console.error('Apod image error: ', error);
+    return throwError(error.message || 'Apod image data service error.');
   }
 
-  createAPODImageResponse(res: any): ApodImageResponse[] {
+  createApodImageResponse(res: any): ApodImageResponse[] {
     return [...res]
   }
 }

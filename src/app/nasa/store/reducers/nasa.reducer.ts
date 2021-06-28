@@ -1,18 +1,18 @@
-import { Action, createReducer, on} from '@ngrx/store';
+import { Action, createReducer, on } from '@ngrx/store';
 import { ApodImageResponse } from '../../models/apod-image-response';
 import * as nasaActions from '../actions/nasa.actions'
 
 
 export type NasaState = {
   apodImage: ApodImageResponse | null;
-  apods: ApodImageResponse[] | null;
+  apods: ApodImageResponse[];
   loading: boolean;
   loaded: boolean;
 };
 
 export const initialState: NasaState = {
   apodImage: null,
-  apods: null,
+  apods: [],
   loading: false,
   loaded: false
 };
@@ -20,30 +20,39 @@ export const initialState: NasaState = {
 const reducer = createReducer<NasaState>(
   initialState,
 
-  on(nasaActions.getNewAPOD, nasaActions.getAPODs, (state, {}) => {
+  on(nasaActions.getNewApod, nasaActions.appendApods, nasaActions.getApods, (state, { }) => {
     return {
       ...state,
       loading: true
     };
   }),
 
-  on(nasaActions.getNewAPODSuccess, (state, { payload }) => {
-      return {
-          ...state,
-          apodImage: payload,
-          loaded: true,
-          loading: false
-      };
+  on(nasaActions.getNewApodSuccess, (state, { payload }) => {
+    return {
+      ...state,
+      apodImage: payload,
+      loaded: true,
+      loading: false
+    };
   }),
 
-  on(nasaActions.getAPODsSuccess, (state, { payload }) => {
+  on(nasaActions.getApodsSuccess, (state, { payload }) => {
     return {
-        ...state,
-        apods: payload,
-        loaded: true,
-        loading: false
+      ...state,
+      apods: payload,
+      loaded: true,
+      loading: false
     };
-}),
+  }),
+
+  on(nasaActions.appendApodsSuccess, (state, payload) => {
+    return {
+      ...state,
+      apods: state.apods.concat(payload.payload),
+      loaded: true,
+      loading: false
+    };
+  })
 
 );
 

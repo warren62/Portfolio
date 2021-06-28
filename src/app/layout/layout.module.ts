@@ -21,7 +21,6 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { AlertModule, AlertConfig } from 'ngx-bootstrap/alert';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ImageViewerComponent } from './image-viewer/image-viewer.component';
 import { CardImageViewerComponent } from './card-image-viewer/card-image-viewer.component';
@@ -32,6 +31,7 @@ import { effects } from './store/effects';
 import { reducers } from './store/reducers';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 
 
@@ -50,7 +50,8 @@ import { EffectsModule } from '@ngrx/effects';
     NavigationComponent,
     ImageViewerComponent,
     CardImageViewerComponent,
-    CardDashboardComponent
+    CardDashboardComponent,
+    SpinnerComponent
   ],
   imports: [
     CoreModule,
@@ -87,7 +88,8 @@ import { EffectsModule } from '@ngrx/effects';
     NavigationComponent,
     ImageViewerComponent,
     CardImageViewerComponent,
-    CardDashboardComponent
+    CardDashboardComponent,
+    SpinnerComponent
   ],
   providers: [AlertConfig]
 })

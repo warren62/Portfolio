@@ -28,7 +28,7 @@
   >
   </app-image-viewer>
 
-    <img
+    <img *ngIf="cardModel.type === 'image'"
       class="image"
       mat-card-image
       src="{{ cardModel.url }}"

@@ -16,25 +16,36 @@ export class NasaEffects {
 
   getNewApod$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(nasaActions.getNewAPOD),
+      ofType(nasaActions.getNewApod),
       switchMap(() =>
-        this.appService.getAPODImageResponse(1).pipe(
-          map(response => nasaActions.getNewAPODSuccess(response[0])),
-          catchError((error: any) => of(nasaActions.getNewAPODFail(error))))
+        this.appService.getApodImageResponse(1).pipe(
+          map(response => nasaActions.getNewApodSuccess(response[0])),
+          catchError((error: any) => of(nasaActions.getNewApodFail(error))))
       )
     )
   );
 
   getApods$ = createEffect(() =>
     this.actions$.pipe(
-      ofType(nasaActions.getAPODs),
+      ofType(nasaActions.getApods),
       switchMap(({ payload }) =>
-        this.appService.getAPODs(payload).pipe(
-          map(response => nasaActions.getAPODsSuccess(response)),
-          catchError((error: any) => of(nasaActions.getAPODsFail(error))))
+        this.appService.getApods(payload).pipe(
+          map(response => nasaActions.getApodsSuccess(response)),
+          catchError((error: any) => of(nasaActions.getApodsFail(error))))
       )
     )
   );
+
+  appendApods$ = createEffect(() =>
+  this.actions$.pipe(
+    ofType(nasaActions.appendApods),
+    switchMap(({ payload }) =>
+      this.appService.getApods(payload).pipe(
+        map(response => nasaActions.appendApodsSuccess(response)),
+        catchError((error: any) => of(nasaActions.appendApodsFail(error))))
+    )
+  )
+);
 
 
 }
