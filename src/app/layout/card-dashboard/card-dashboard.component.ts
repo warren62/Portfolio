@@ -12,13 +12,12 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 export class CardDashboardComponent {
 
   @Input() cards: Card[] = []
+  @Input() loading: boolean = false;
 
   cols: number = 3;
 
   colspan: number = 1
   rowspan: number = 2
-
-  loading: boolean = false;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 

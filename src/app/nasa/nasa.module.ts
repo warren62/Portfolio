@@ -11,6 +11,7 @@ import { LayoutModule } from '../layout/layout.module';
 import { CoreModule } from '../core/core.module';
 import { ApodCardCarouselComponent } from './apod-card-carousel/apod-card-carousel.component';
 import { ApodCardViewComponent } from './apod-card-view/apod-card-view.component';
+import { ApodCardDashboardComponent } from './apod-card-dashboard/apod-card-dashboard.component';
 
 @NgModule({
   providers:[
@@ -19,7 +20,8 @@ import { ApodCardViewComponent } from './apod-card-view/apod-card-view.component
   declarations: [
     ApodComponent,
     ApodCardCarouselComponent,
-    ApodCardViewComponent
+    ApodCardViewComponent,
+    ApodCardDashboardComponent
   ],
   imports: [
     HttpClientModule,
@@ -32,7 +34,8 @@ import { ApodCardViewComponent } from './apod-card-view/apod-card-view.component
   exports: [
     ApodComponent,
     ApodCardCarouselComponent,
-    ApodCardViewComponent
+    ApodCardViewComponent,
+    ApodCardDashboardComponent
   ]
 })
 export class NasaModule { }
