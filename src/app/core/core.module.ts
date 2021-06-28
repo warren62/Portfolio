@@ -1,14 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { SafePipe } from './pipes/safe.pipe';
 import { LayoutModule } from '@angular/cdk/layout';
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { EmailModule } from './email/email.module';
+import { FullscreenDirective } from './directives/fullscreen.directive';
 
 @NgModule({
   declarations: [
-    SafePipe
+    SafePipe,
+    FullscreenDirective
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,9 @@ import { EmailModule } from './email/email.module';
     EmailModule,
     RouterOutlet,
     RouterLink,
-    SafePipe
-  ]
+    SafePipe,
+    FullscreenDirective
+  ],
+  providers:[DatePipe, SafePipe]
 })
 export class CoreModule { }

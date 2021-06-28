@@ -12,9 +12,9 @@ export class NasaEffects {
   constructor(
     private actions$: Actions,
     private appService: NasaDataService
-  ) {}
+  ) { }
 
-  nasaLogin$ = createEffect(() =>
+  getNewApod$ = createEffect(() =>
     this.actions$.pipe(
       ofType(nasaActions.getNewAPOD),
       switchMap(() =>
@@ -24,4 +24,17 @@ export class NasaEffects {
       )
     )
   );
+
+  getApods$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(nasaActions.getAPODs),
+      switchMap(({ payload }) =>
+        this.appService.getAPODs(payload).pipe(
+          map(response => nasaActions.getAPODsSuccess(response)),
+          catchError((error: any) => of(nasaActions.getAPODsFail(error))))
+      )
+    )
+  );
+
+
 }

@@ -2,7 +2,36 @@
 @import '~ngx-sharebuttons/themes/default/default-theme';
 @import '~ngx-sharebuttons/themes/material/material-dark-theme';
 @import '~ngx-sharebuttons/themes/modern/modern-light-theme';
+
+// @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'assets/css/carousel.css';
+// @import "~bootstrap/dist/css/bootstrap.css";
+
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// carousel.slide-animated {
+//   slide.item {
+//     animation-duration: 1s;
+//     animation-fill-mode: both;
+//     &.active {
+//       width: 100%;
+//       animation-name: carouselSlideIn;
+//     }
+//     &:not(.active) {
+//       display: table-cell;
+//       animation-name: carouselSlideOut;
+//     }
+//   }
+// }
+
+// @keyframes carouselSlideIn {
+//   0% { transform: translateX(100%); }
+//   100% { transform: translateX(0); }
+// }
+// @keyframes carouselSlideOut {
+//   0% { transform: translateX(0); }
+//   100% { transform: translateX(-100%); }
+// }

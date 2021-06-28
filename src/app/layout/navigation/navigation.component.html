@@ -1,0 +1,56 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav
+    #drawer
+    class="sidenav"
+    fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false"
+  >
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <button mat-button routerLink="/home" class="menu-button">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+      </button>
+      <button mat-button routerLink="/about" class="menu-button">
+        <mat-icon>info</mat-icon>
+        <span>About</span>
+      </button>
+      <button mat-button routerLink="/skills" class="menu-button">
+        <mat-icon>build</mat-icon>
+        <span>Skills</span>
+      </button>
+      <button mat-button routerLink="/experience" class="menu-button">
+        <mat-icon>person</mat-icon>
+        <span>Experience</span>
+      </button>
+      <button mat-button routerLink="/projects" class="menu-button">
+        <mat-icon>code</mat-icon>
+        <span>Projects</span>
+      </button>
+
+      <mat-divider></mat-divider>
+
+      <button mat-button routerLink="/contact" class="menu-button">
+        <mat-icon>help</mat-icon>
+        <span>Contact</span>
+      </button>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar >
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>my-portfolio</span>
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

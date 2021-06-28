@@ -12,11 +12,26 @@ import { CardComponent } from './card/card.component';
 import { CoreModule } from '../core/core.module';
 import { FormInputFieldComponent } from './form-input-field/form-input-field.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormSelectComponent } from './form-select/form-select.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardViewComponent } from './card-view/card-view.component';
-import { MatChip, MatChipList } from '@angular/material/chips';
+
+import { CardCarouselComponent } from './card-carousel/card-carousel.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { AlertModule, AlertConfig } from 'ngx-bootstrap/alert';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { NavigationComponent } from './navigation/navigation.component';
+import { ImageViewerComponent } from './image-viewer/image-viewer.component';
+import { CardImageViewerComponent } from './card-image-viewer/card-image-viewer.component';
+import { CardDashboardComponent } from './card-dashboard/card-dashboard.component';
+
+
+import { effects } from './store/effects';
+import { reducers } from './store/reducers';
+import { StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 
 
@@ -30,7 +45,12 @@ import { MatChip, MatChipList } from '@angular/material/chips';
     CardComponent,
     FormInputFieldComponent,
     FormSelectComponent,
-    CardViewComponent
+    CardViewComponent,
+    CardCarouselComponent,
+    NavigationComponent,
+    ImageViewerComponent,
+    CardImageViewerComponent,
+    CardDashboardComponent
   ],
   imports: [
     CoreModule,
@@ -41,7 +61,14 @@ import { MatChip, MatChipList } from '@angular/material/chips';
     ShareButtonsPopupModule,
     ShareIconsModule,
     FlexLayoutModule,
-    CommonModule
+    AccordionModule,
+    AlertModule,
+    ButtonsModule,
+    CarouselModule,
+    CommonModule,
+    StoreModule.forFeature('layout', reducers),
+    EffectsModule.forFeature(effects)
+
   ],
   exports: [
     FormsModule,
@@ -52,13 +79,16 @@ import { MatChip, MatChipList } from '@angular/material/chips';
     ShareButtonComponent,
     CardComponent,
     FormInputFieldComponent,
-    // no need for custom component here
-    MatCheckboxModule,
     FormSelectComponent,
-    MatChipList,
-    MatChip,
     FlexLayoutModule,
-    CardViewComponent
-  ]
+    CardViewComponent,
+    CardCarouselComponent,
+    MaterialModule,
+    NavigationComponent,
+    ImageViewerComponent,
+    CardImageViewerComponent,
+    CardDashboardComponent
+  ],
+  providers: [AlertConfig]
 })
 export class LayoutModule { }

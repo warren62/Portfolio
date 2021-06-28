@@ -9,13 +9,17 @@ import { effects } from './store/effects';
 import { reducers } from './store/reducers';
 import { LayoutModule } from '../layout/layout.module';
 import { CoreModule } from '../core/core.module';
+import { ApodCardCarouselComponent } from './apod-card-carousel/apod-card-carousel.component';
+import { ApodCardViewComponent } from './apod-card-view/apod-card-view.component';
 
 @NgModule({
   providers:[
     NasaDataService
   ],
   declarations: [
-    ApodComponent
+    ApodComponent,
+    ApodCardCarouselComponent,
+    ApodCardViewComponent
   ],
   imports: [
     HttpClientModule,
@@ -26,7 +30,9 @@ import { CoreModule } from '../core/core.module';
     EffectsModule.forFeature(effects),
   ],
   exports: [
-    ApodComponent
+    ApodComponent,
+    ApodCardCarouselComponent,
+    ApodCardViewComponent
   ]
 })
 export class NasaModule { }

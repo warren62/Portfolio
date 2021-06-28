@@ -12,6 +12,11 @@ import { MatInputModule } from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatSelectModule} from '@angular/material/select';
 import {MatChipsModule} from '@angular/material/chips';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [],
@@ -27,6 +32,14 @@ import {MatChipsModule} from '@angular/material/chips';
     MatCheckboxModule,
     MatSelectModule,
     MatChipsModule,
+    MatGridListModule,
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule,
+    LayoutModule,
     CommonModule
   ],
   exports: [
@@ -40,7 +53,12 @@ import {MatChipsModule} from '@angular/material/chips';
     MatInputModule,
     MatCheckboxModule,
     MatSelectModule,
-    MatChipsModule
+    MatChipsModule,
+    MatGridListModule,
+    MatListModule,
+    MatMenuModule,
+    MatTooltipModule,
+    LayoutModule
   ]
 })
 export class MaterialModule { }
