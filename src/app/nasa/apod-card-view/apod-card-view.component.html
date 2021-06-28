@@ -4,57 +4,7 @@
 <h1 fxHide fxShow.lg>LG</h1>
 <h1 fxHide fxShow.xl>XL</h1>
 
-<!-- <mat-card fxFlex.sm="0 1 calc(50%-10px)" fxFlex.md="0 1 calc(33%-10px)" fxFlex.gt-md="0 1 calc(25%-10px)" *ngFor="let cardModel of apodCards$ | async" class="example-card">
-    <mat-card-header>
+<app-card-view [cardModels]="apodCards$ | async">
 
-      <mat-card-title>{{ cardModel.title }}</mat-card-title>
+</app-card-view>
 
-      <mat-card-subtitle>{{ cardModel.subTitle }}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="{{ cardModel.url }}" alt="Error Photo" />
-    <ng-content></ng-content>
-
-    <mat-card-content>
-      <p [innerHTML]="cardModel.description"></p>
-    </mat-card-content>
-
-
-    <mat-card-actions >
-      <app-share-button [url]="cardModel.shareUrl || ''"> </app-share-button>
-    </mat-card-actions>
-</mat-card> -->
-
-<div
-  fxLayout.xs="column"
-  fxLayout="row wrap"
-  fxLayoutGap="10px"
-  ngClass.gt-xs="ml-10"
->
-  <mat-card
-    fxFlex.sm="0 1 calc(50%-10px)"
-    fxFlex.md="0 1 calc(33%-10px)"
-    fxFlex.gt-md="0 1 calc(25%-10px)"
-    *ngFor="let cardModel of apodCards$ | async"
-    class="example-card"
-  >
-    <mat-card-header>
-      <mat-card-title>{{ cardModel.title }}</mat-card-title>
-
-      <mat-card-subtitle>{{ cardModel.subTitle }}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="{{ cardModel.url }}" alt="Error Photo" />
-    <ng-content></ng-content>
-
-    <mat-card-content>
-      <p [innerHTML]="cardModel.description"></p>
-    </mat-card-content>
-
-    <mat-card-actions>
-      <app-share-button [url]="cardModel.shareUrl || ''"> </app-share-button>
-    </mat-card-actions>
-  </mat-card>
-</div>
-
-<!-- Copyright 2019 Google Inc. All Rights Reserved.
-    Use of this source code is governed by an MIT-style license that
-    can be found in the LICENSE file at http://angular.io/license -->
