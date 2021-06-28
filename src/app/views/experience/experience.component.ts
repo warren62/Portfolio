@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Card } from 'src/app/layout/card/models/card.model';
 import { ExperienceCard } from './models/experience-card.model';
 
 @Component({
@@ -13,7 +12,7 @@ export class ExperienceComponent implements OnInit {
     {
       title: 'EZFacility',
       subTitle: '.NET/Angular Developer',
-      url: '',
+      url: 'assets/png/ez.png',
       description: '',
       shareUrl: '',
       type: '',
@@ -99,7 +98,7 @@ export class ExperienceComponent implements OnInit {
     {
       title: 'RSM Sensitron Semiconductor',
       subTitle: 'Automation .NET developer',
-      url: '',
+      url: 'assets/png/rsm.png',
       description: `<ul><li>Create ERP/MRP systems to help production ensure orders are delivered on time</li><li>Integrate floor machinery with internal software via API’s</li><li>Revamp/debug old production management systems</li><li>Install and provide in house code customizations for ERP system (Made2Manage)</li></ul>`,
       shareUrl: '',
       type: '',
@@ -161,7 +160,7 @@ export class ExperienceComponent implements OnInit {
     {
       title: 'Voxx International',
       subTitle: 'Data Analyst',
-      url: '',
+      url: 'assets/png/voxx.png',
       description: '<ul><li>Salesforce Administrator/Developer</li><li>Business Objects Administrator</li><li>Generate, modify, automate, and troubleshoot various business reports</li><li>Conduct server maintenance.</li></ul>',
       shareUrl: '',
       type: '',
@@ -202,7 +201,7 @@ export class ExperienceComponent implements OnInit {
     {
       title: 'Specialist, US Army – Combat Engineer',
       subTitle: 'Team leader for 2nd Platoon 62nd Sapper Company',
-      url: '',
+      url: 'assets/jpg/combat-engineer.jpg',
       description: '',
       shareUrl: '',
       type: '',

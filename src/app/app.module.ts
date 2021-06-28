@@ -22,6 +22,9 @@ import { ProjectsComponent } from './views/projects/projects.component';
 import { ExperienceCardComponent } from './views/experience/components/experience-card/experience-card.component';
 import { ExperienceCardViewComponent } from './views/experience/components/experience-card-view/experience-card-view.component';
 import { ProjectCardCarouselComponent } from './views/projects/components/project-card-carousel/project-card-carousel.component';
+import { SkillsCardDashboardComponent } from './views/skills/components/skills-card-dashboard/skills-card-dashboard.component';
+import { SkillsCardComponent } from './views/skills/components/skills-card/skills-card.component';
+import { SkillsCardViewComponent } from './views/skills/components/skills-card-view/skills-card-view.component';
 
 
 
@@ -36,7 +39,10 @@ import { ProjectCardCarouselComponent } from './views/projects/components/projec
     ProjectsComponent,
     ExperienceCardComponent,
     ExperienceCardViewComponent,
-    ProjectCardCarouselComponent
+    ProjectCardCarouselComponent,
+    SkillsCardDashboardComponent,
+    SkillsCardComponent,
+    SkillsCardViewComponent
   ],
   imports: [
     NasaModule,
