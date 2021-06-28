@@ -1,9 +1,0 @@
-  <div  #fullScreen *ngIf="open$ | async" class="viewer-container">
-    <div class="viewer-content" >
-      <a class="close-button" (click)="closefullscreen()"> Close Image </a>
-      <a matTooltip="Click to hide description" *ngIf="description && showDescription" class="description" (click)="showDescription = false">
-        {{ description }}
-      </a>
-      <img class="main-img" [src]="imageURL" />
-    </div>
-  </div>
