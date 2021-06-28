@@ -21,6 +21,7 @@ import { ExperienceComponent } from './views/experience/experience.component';
 import { ProjectsComponent } from './views/projects/projects.component';
 import { ExperienceCardComponent } from './views/experience/components/experience-card/experience-card.component';
 import { ExperienceCardViewComponent } from './views/experience/components/experience-card-view/experience-card-view.component';
+import { ProjectCardCarouselComponent } from './views/projects/components/project-card-carousel/project-card-carousel.component';
 
 
 
@@ -34,7 +35,8 @@ import { ExperienceCardViewComponent } from './views/experience/components/exper
     ExperienceComponent,
     ProjectsComponent,
     ExperienceCardComponent,
-    ExperienceCardViewComponent
+    ExperienceCardViewComponent,
+    ProjectCardCarouselComponent
   ],
   imports: [
     NasaModule,

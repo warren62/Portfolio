@@ -1,35 +1,25 @@
-
 <mat-card class="mat-parent">
-  <carousel class="slide-animated">
+  <carousel>
     <div>
       <slide *ngFor="let card of cards; let index = index" >
-        <!-- <mat-card class="example-card">
-              <img mat-card-image src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg" alt="Photo of a Shiba Inu">
-              <mat-card-content>
-                  <div class="card-body">
-                      <h4 class="card-title">Card title 1</h4>
-                      <p>Some quick example text to build on the card title and make up the bulk of the card's content 1.
-                      </p>
-                      <button mat-raised-button color="primary">Primary</button>
-                  </div>
-              </mat-card-content>
-          </mat-card> -->
-        <app-card
-          [cardModel]="{
-            title: card.title,
-            subTitle: card.subTitle,
-            description: card.description,
-            url: card.url,
-            shareUrl: card.shareUrl,
-            type: card.type
-          }"
-          [loading]="loading"
-        ></app-card>
+          <div style="text-align: center;" class='parent'>
+            <app-card
+            [cardModel]="{
+              title: card.title,
+              subTitle: card.subTitle,
+              description: card.description,
+              url: card.url,
+              shareUrl: card.shareUrl,
+              type: card.type
+            }"
+            [loading]="loading"
+          ></app-card>
+          </div>
+
       </slide>
     </div>
   </carousel>
 </mat-card>
-<!--/*for mobile and small  devices */-->
 <mat-card class="mat-parent-small">
   <carousel>
     <slide *ngFor="let card of cards; let index = index">

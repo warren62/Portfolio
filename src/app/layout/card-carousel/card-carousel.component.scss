@@ -38,6 +38,12 @@
 .mat-parent-small {
   display: none;
 }
+
+:host ::ng-deep .parent .image {
+  max-height: 300px;
+  margin: 0 auto;
+}
+
 /*for ipad and other lage tabs*/
 @media only screen and (max-width: 768px) {
   .mat-parent-small {
@@ -84,7 +90,6 @@
     position: relative;
     height: 440px;
     padding-bottom: 10%;
-    /*background-image: url("/assets/img/bg1.jpg");*/
   }
   .carousel-item {
     height: 385px;
