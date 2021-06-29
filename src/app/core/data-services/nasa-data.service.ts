@@ -8,26 +8,26 @@ import { catchError, filter, map, } from 'rxjs/operators';
 import { ApodImageResponse } from '../../nasa/models/apod-image-response';
 import { ApodRequest } from 'src/app/nasa/models/apod-request';
 import { DatePipe } from '@angular/common';
+import { EnvironmentService } from '../services/environment.service';
 
 @Injectable({
   providedIn: 'root'
 })
 
-// TODO: move this to a core module
 export class NasaDataService {
 
-  nasa_url = 'https://api.nasa.gov/planetary/apod?api_key=OUglulkWhUypTytmdHNOa5V383PWM1woloIg3Nn6'
+  nasa_url = this.environment.nasaApiUrl;
 
-  constructor(private http_client: HttpClient, public datepipe: DatePipe) { }
+  constructor(private http_client: HttpClient, public datepipe: DatePipe, public environment: EnvironmentService) { }
 
   getApodImage(apodRequest: ApodRequest): Observable<HttpResponse<ApodImageResponse[]>> {
     let url = this.nasa_url;
 
-    // cant use both count and start
-    if(apodRequest.count) {
+    // can't use both count and start
+    if (apodRequest.count) {
       url += '&count=' + apodRequest.count;
     }
-    if (apodRequest.start) {
+    else if (apodRequest.start) {
       url += `&start_date=${this.datepipe.transform(apodRequest.start, 'yyyy-MM-dd')}`;
       url += apodRequest.end ? `&end_date=${this.datepipe.transform(apodRequest.end, 'yyyy-MM-dd')}` : ''
     }
