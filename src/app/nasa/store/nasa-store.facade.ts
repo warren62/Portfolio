@@ -9,6 +9,7 @@ import * as fromSelectors from './selectors';
 @Injectable({ providedIn: 'root' })
 export class NasaStoreFacade {
   loading$ = this.store.pipe(select(fromSelectors.getLoading));
+  loaded$ = this.store.pipe(select(fromSelectors.getLoaded));
   randomApod$ = this.store.pipe(select(fromSelectors.getRandomApod));
   apods$ = this.store.pipe(select(fromSelectors.getApods));
 

@@ -48,7 +48,7 @@ const reducer = createReducer<NasaState>(
   on(nasaActions.appendApodsSuccess, (state, payload) => {
     return {
       ...state,
-      apods: state.apods.concat(payload.payload),
+      apods: payload.payload.concat(state.apods),
       loaded: true,
       loading: false
     };

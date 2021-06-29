@@ -13,6 +13,7 @@ export class CardDashboardComponent {
 
   @Input() cards: Card[] = []
   @Input() loading: boolean = false;
+  @Input() title: string = 'Dashboard';
 
   cols: number = 3;
 

@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
+import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 import { Card } from 'src/app/layout/card/models/card.model';
 import { ApodImageResponse } from '../models/apod-image-response';
 import { NasaStoreFacade } from '../store/nasa-store.facade';
 
+@UntilDestroy()
 @Component({
   selector: 'app-apod-card-dashboard',
   templateUrl: './apod-card-dashboard.component.html',
@@ -17,6 +19,7 @@ export class ApodCardDashboardComponent implements OnInit {
   loading$: Observable<boolean> = new Observable<boolean>();
 
   startDate: Date = new Date();
+  loaded: boolean = false;
 
   constructor(private facade: NasaStoreFacade) {
 
@@ -24,7 +27,8 @@ export class ApodCardDashboardComponent implements OnInit {
     this.apodCards$ = this.facade.apods$.pipe(
       filter(values => !!values),
       map(values => {
-        return values!.map(value => {
+        // TODO: get videos working
+        return values!.filter(v => v.media_type !== 'video').map(value => {
           return {
             title: value.title,
             subTitle: value.copyright,
@@ -38,16 +42,23 @@ export class ApodCardDashboardComponent implements OnInit {
       })
     )
     this.loading$ = this.facade.loading$;
+    this.facade.loaded$.pipe(
+      untilDestroyed(this)
+    ).subscribe( value =>
+      this.loaded = value
+    );
   }
 
   ngOnInit(): void {
 
-    const start = new Date()
-    start.setDate(start.getDate() - 30)
-    this.startDate = start
-    this.facade.getApods({
-      start: start
-    })
+    if(!this.loaded) {
+      const start = new Date()
+      start.setDate(start.getDate() - 30)
+      this.startDate = start
+      this.facade.getApods({
+        start: start
+      })
+    }
   }
 
   getApods() {
