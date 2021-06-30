@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { SafePipe } from './pipes/safe.pipe';
 import { LayoutModule } from '@angular/cdk/layout';
-import { AppRoutingModule } from '../app-routing.module';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { EmailModule } from './email/email.module';
 
 @NgModule({
@@ -12,7 +11,7 @@ import { EmailModule } from './email/email.module';
   ],
   imports: [
     CommonModule,
-    AppRoutingModule,
+    RouterModule,
     LayoutModule
   ],
   exports: [
