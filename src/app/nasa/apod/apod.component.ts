@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable, interval } from 'rxjs';
 import { ApodImageResponse } from '../models/apod-image-response';
 import { NasaStoreFacade } from '../store/nasa-store.facade';
@@ -6,7 +6,8 @@ import { NasaStoreFacade } from '../store/nasa-store.facade';
 @Component({
   selector: 'app-apod',
   templateUrl: './apod.component.html',
-  styleUrls: ['./apod.component.scss']
+  styleUrls: ['./apod.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ApodComponent implements OnInit {
 

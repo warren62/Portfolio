@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
 import { Card } from 'src/app/layout/card/models/card.model';
@@ -8,7 +8,8 @@ import { NasaStoreFacade } from '../store/nasa-store.facade';
 @Component({
   selector: 'app-apod-card-carousel',
   templateUrl: './apod-card-carousel.component.html',
-  styleUrls: ['./apod-card-carousel.component.scss']
+  styleUrls: ['./apod-card-carousel.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ApodCardCarouselComponent implements OnInit {
 

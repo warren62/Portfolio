@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ApodComponent } from './apod/apod.component';
 import { NasaDataService } from '../core/data-services/nasa-data.service';
-import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { effects } from './store/effects';
@@ -24,7 +23,6 @@ import { ApodCardDashboardComponent } from './apod-card-dashboard/apod-card-dash
     ApodCardDashboardComponent
   ],
   imports: [
-    HttpClientModule,
     CoreModule,
     CommonModule,
     LayoutModule,

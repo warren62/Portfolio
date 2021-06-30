@@ -3,6 +3,7 @@ import { CommonModule, DatePipe } from '@angular/common';
 import { SafePipe } from './pipes/safe.pipe';
 import { LayoutModule } from '@angular/cdk/layout';
 import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 import { EmailModule } from './email/email.module';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { EmailModule } from './email/email.module';
   imports: [
     CommonModule,
     RouterModule,
+    HttpClientModule,
     LayoutModule
   ],
   exports: [
