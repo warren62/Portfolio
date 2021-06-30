@@ -11,7 +11,6 @@ import { EffectsModule } from '@ngrx/effects';
 import { AppComponent } from './app.component';
 
 import { LayoutModule } from './layout/layout.module';
-import { NasaModule } from './nasa/nasa.module';
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 
@@ -22,7 +21,6 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent
   ],
   imports: [
-    NasaModule,
     LayoutModule,
     BrowserModule,
     CoreModule,
