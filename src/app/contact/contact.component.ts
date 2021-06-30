@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { EmailStoreFacade } from '@app/core/email/store/email-store.facade';
 import { Observable } from 'rxjs';
-import { EmailStoreFacade } from 'src/app/core/email/store/email-store.facade';
 
 @Component({
   selector: 'app-contact',

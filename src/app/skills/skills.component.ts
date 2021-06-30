@@ -7,6 +7,7 @@ import { SkillsCard } from './components/models/skills-card.model';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
+
   cards: SkillsCard[] = [
     {
       title: '.NET',
