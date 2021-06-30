@@ -1,0 +1,40 @@
+<mat-card class="mat-parent">
+  <carousel>
+    <div>
+      <slide *ngFor="let card of cards; let index = index" >
+          <div style="text-align: center;" class='parent'>
+            <app-card
+            [cardModel]="{
+              title: card.title,
+              subTitle: card.subTitle,
+              description: card.description,
+              url: card.url,
+              shareUrl: card.shareUrl,
+              type: card.type
+            }"
+            [loading]="loading"
+          ></app-card>
+          </div>
+
+      </slide>
+    </div>
+  </carousel>
+</mat-card>
+<mat-card class="mat-parent-small">
+  <carousel>
+    <slide *ngFor="let card of cards; let index = index">
+      <app-card
+        [cardModel]="{
+          title: card.title,
+          subTitle: card.subtitle,
+          description: card.description,
+          url: card.url,
+          shareUrl: card.shareUrl,
+          type: card.type
+        }"
+        [loading]="loading"
+      ></app-card>
+    </slide>
+  </carousel>
+</mat-card>
+

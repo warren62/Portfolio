@@ -1,0 +1,6 @@
+<app-card-dashboard [cards]="apodCards$ | async" [loading]="loading$ | async" [title]="'Nasa APOD Viewer'">
+  <div class="center">
+    <button mat-stroked-button color="accent" class="btn" (click)="getApods()">Load More</button>
+  </div>
+
+</app-card-dashboard>

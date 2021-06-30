@@ -1,0 +1,33 @@
+<app-card class="content"
+  [cardModel]="{
+    title: card.title,
+    subTitle: card.subTitle,
+    description: card.description,
+    url: card.url,
+    shareUrl: card.shareUrl
+  }"
+>
+
+  <div *ngIf="card.experienceChips.length > 0">
+    <p>Experience</p>
+    <mat-chip-list aria-label="Fish selection">
+      <mat-chip
+        *ngFor="let chip of card.experienceChips"
+        routerLink="{{ chip.routerLink }}"
+        >{{ chip.label }}</mat-chip
+      >
+    </mat-chip-list>
+  </div>
+
+  <div *ngIf="card.projectChips.length > 0">
+    <p>Projects</p>
+    <mat-chip-list>
+      <mat-chip
+        *ngFor="let chip of card.projectChips"
+        routerLink="{{ chip.routerLink }}"
+        >{{ chip.label }}</mat-chip
+      >
+    </mat-chip-list>
+  </div>
+
+</app-card>

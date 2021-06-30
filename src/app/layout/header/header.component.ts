@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  @Output() onMenuClick: EventEmitter<null> = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  menuClick(){
+    this.onMenuClick.emit();
   }
 
 }

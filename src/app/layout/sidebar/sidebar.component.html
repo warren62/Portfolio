@@ -1,1 +1,37 @@
-<p>sidebar works!</p>
+<mat-sidenav-container class="example-sidenav-container">
+  <mat-sidenav #sidenav class="mat-elevation-z8">
+    <button mat-button routerLink="/home" class="menu-button">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+    </button>
+    <button mat-button routerLink="/about" class="menu-button">
+      <mat-icon>info</mat-icon>
+      <span>About</span>
+    </button>
+    <button mat-button routerLink="/skills" class="menu-button">
+      <mat-icon>build</mat-icon>
+      <span>Skills</span>
+    </button>
+    <button mat-button routerLink="/experience" class="menu-button">
+        <mat-icon>person</mat-icon>
+        <span>Experience</span>
+    </button>
+    <button mat-button routerLink="/projects" class="menu-button">
+      <mat-icon>code</mat-icon>
+      <span>Projects</span>
+    </button>
+
+    <mat-divider></mat-divider>
+
+    <button mat-button routerLink="/contact" class="menu-button">
+        <mat-icon>help</mat-icon>
+        <span>Contact</span>
+    </button>
+
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
