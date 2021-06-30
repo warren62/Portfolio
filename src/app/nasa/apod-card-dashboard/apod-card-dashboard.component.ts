@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { Observable } from 'rxjs';
 import { filter, map } from 'rxjs/operators';
@@ -10,7 +10,8 @@ import { NasaStoreFacade } from '../store/nasa-store.facade';
 @Component({
   selector: 'app-apod-card-dashboard',
   templateUrl: './apod-card-dashboard.component.html',
-  styleUrls: ['./apod-card-dashboard.component.scss']
+  styleUrls: ['./apod-card-dashboard.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ApodCardDashboardComponent implements OnInit {
 

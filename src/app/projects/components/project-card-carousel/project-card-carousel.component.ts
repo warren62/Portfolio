@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-project-card-carousel',
   templateUrl: './project-card-carousel.component.html',
-  styleUrls: ['./project-card-carousel.component.scss']
+  styleUrls: ['./project-card-carousel.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectCardCarouselComponent implements OnInit {
   cards = [
