@@ -28,7 +28,7 @@ export class ApodCardCarouselComponent implements OnInit {
             title: value.title,
             subTitle: value.copyright,
             description: value.explanation,
-            url: value.hdurl ?? value.url,
+            url: [value.hdurl ?? value.url],
             shareUrl: value.hdurl ?? value.url,
             type: value.media_type,
           }

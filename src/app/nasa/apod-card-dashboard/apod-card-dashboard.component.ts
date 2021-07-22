@@ -10,8 +10,7 @@ import { NasaStoreFacade } from '../store/nasa-store.facade';
 @Component({
   selector: 'app-apod-card-dashboard',
   templateUrl: './apod-card-dashboard.component.html',
-  styleUrls: ['./apod-card-dashboard.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['./apod-card-dashboard.component.scss']
 })
 export class ApodCardDashboardComponent implements OnInit {
 
@@ -34,7 +33,7 @@ export class ApodCardDashboardComponent implements OnInit {
             title: value.title,
             subTitle: value.copyright,
             description: value.explanation,
-            url: value.hdurl ?? value.url,
+            url: [value.hdurl ?? value.url],
             thumbnailUrl: value.url,
             shareUrl: value.hdurl ?? value.url,
             type: value.media_type,

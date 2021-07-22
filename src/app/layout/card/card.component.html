@@ -6,7 +6,41 @@
 
     <mat-card-subtitle>{{ cardModel.subTitle }}</mat-card-subtitle>
   </mat-card-header>
-  <img class="image" mat-card-image src="{{ cardModel.url }}" alt="Error Photo" />
+
+  <carousel *ngIf="cardModel.url?.length > 1;else image" class="mat-parent">
+    <div>
+      <slide *ngFor="let url of cardModel.url; let index = index" >
+          <div style="text-align: center;" class='parent'>
+            <img class="image" mat-card-image src="{{ url }}" alt="Error Photo" />
+          </div>
+
+      </slide>
+    </div>
+  </carousel>
+
+    <!-- <mat-card *ngIf="cardModel.url?.length > 1;else image" class="mat-parent">
+      <carousel>
+        <div>
+          <slide *ngFor="let url of cardModel.url; let index = index" >
+              <div style="text-align: center;" class='parent'>
+                <img class="image" mat-card-image src="{{ url }}" alt="Error Photo" />
+              </div>
+
+          </slide>
+        </div>
+      </carousel>
+    </mat-card> -->
+    <!-- <mat-card class="mat-parent-small">
+      <carousel>
+        <slide *ngFor="let url of cardModel.url; let index = index">
+          <img class="image" mat-card-image src="{{ url }}" alt="Error Photo" />
+        </slide>
+      </carousel>
+    </mat-card> -->
+  <ng-template #image>
+    <img  class="image" mat-card-image src="{{ cardModel?.url[0] }}" alt="Error Photo" />
+  </ng-template>
+
   <ng-content></ng-content>
 
   <mat-card-content>

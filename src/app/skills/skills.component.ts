@@ -13,9 +13,9 @@ export class SkillsComponent implements OnInit {
     {
       title: '.NET',
       subTitle: '3+ years',
-      url: 'assets/svg/dot-net-core-7.svg',
+      url: ['assets/svg/dot-net-core-7.svg'],
       description:
-      `<ul>
+        `<ul>
           <li>3+ years experience as a .NET developer</li>
           <li>WPF/MVVM, WinForms, Asp, MVC, VB/C#, .NET WebAPI </li>
           <li>Revamp/debug old production management systems</li>
@@ -79,9 +79,9 @@ export class SkillsComponent implements OnInit {
     {
       title: 'Java',
       subTitle: '4+ years',
-      url: 'assets/svg/java-4.svg',
+      url: ['assets/svg/java-4.svg'],
       description:
-      `<ul>
+        `<ul>
           <li>4+ years experience working with Java</li>
           <li>Java was the language I used primarily in school</li>
           <li>Andorid Development</li>
@@ -108,9 +108,9 @@ export class SkillsComponent implements OnInit {
     {
       title: 'Javascript',
       subTitle: '3+ years',
-      url: 'assets/svg/javascript-2.svg',
+      url: ['assets/svg/javascript-2.svg'],
       description:
-      `<ul>
+        `<ul>
           <li>3+ years experience working with Javascript</li>
           <li>Used in various random applications throughout the EZTMS project in conjunction with MVC/WebForms</li>
           <li>Typescript for angular</li>
@@ -153,9 +153,9 @@ export class SkillsComponent implements OnInit {
     {
       title: 'Typescript',
       subTitle: '3+ years',
-      url: 'assets/svg/typescript.svg',
+      url: ['assets/svg/typescript.svg'],
       description:
-      `<ul>
+        `<ul>
           <li>3+ years experience working with Typescript/Angular</li>
           <li>Used in creation of all components for EZUI</li>
           <li>Typescript for angular</li>
@@ -198,9 +198,9 @@ export class SkillsComponent implements OnInit {
     {
       title: 'JQuery',
       subTitle: '3+ years',
-      url: 'assets/svg/jquery-1.svg',
+      url: ['assets/svg/jquery-1.svg'],
       description:
-      `<ul>
+        `<ul>
           <li>3+ years experience working with Jquery/Javascript</li>
           <li>Used in various places in EZTMS project</li>
           <li>Typescript for angular</li>
@@ -237,76 +237,76 @@ export class SkillsComponent implements OnInit {
       ]
     },
     {
-    title: 'HMTL/CSS',
-    subTitle: '3+ years',
-    url: 'assets/svg/html5-2.svg',
-    description:
-    `<ul>
+      title: 'HMTL/CSS',
+      subTitle: '3+ years',
+      url: ['assets/svg/html5-2.svg'],
+      description:
+        `<ul>
         <li>3+ years experience working with HTML/CSS</li>
         <li>Anuglar/WebForms/MVC</li>
     </ul>`,
-    shareUrl: '',
-    type: 'image',
-    experienceChips: [
-      {
-        label: 'EZFacility',
-        routerLink: '/experience'
-      },
-      {
-        label: 'Voxx International',
-        routerLink: '/experience'
-      }
-    ],
-    projectChips: [
-      {
-        label: 'EZTMS',
-        routerLink: '/projects'
-      },
-      {
-        label: 'EZTMS API',
-        routerLink: '/projects'
-      },
-      {
-        label: 'EZUI',
-        routerLink: '/projects'
-      },
-      {
-        label: 'EZUI API',
-        routerLink: '/projects'
-      },
-      {
-        label: 'EZ Self-Service',
-        routerLink: '/projects'
-      }
-    ]
-  },
+      shareUrl: '',
+      type: 'image',
+      experienceChips: [
+        {
+          label: 'EZFacility',
+          routerLink: '/experience'
+        },
+        {
+          label: 'Voxx International',
+          routerLink: '/experience'
+        }
+      ],
+      projectChips: [
+        {
+          label: 'EZTMS',
+          routerLink: '/projects'
+        },
+        {
+          label: 'EZTMS API',
+          routerLink: '/projects'
+        },
+        {
+          label: 'EZUI',
+          routerLink: '/projects'
+        },
+        {
+          label: 'EZUI API',
+          routerLink: '/projects'
+        },
+        {
+          label: 'EZ Self-Service',
+          routerLink: '/projects'
+        }
+      ]
+    },
     {
-    title: 'Flutter/Dart',
-    subTitle: '< 1 years',
-    url: 'assets/svg/flutter.svg',
-    description:
-    `<ul>
+      title: 'Flutter/Dart',
+      subTitle: '< 1 years',
+      url: ['assets/svg/flutter.svg'],
+      description:
+        `<ul>
         <li>Started creating my own Flutter project recently</li>
         <li>I have very limited experience here but am learning</li>
     </ul>`,
-    shareUrl: '',
-    type: 'image',
-    experienceChips: [
+      shareUrl: '',
+      type: 'image',
+      experienceChips: [
 
-    ],
-    projectChips: [
-      {
-        label: 'TBD',
-        routerLink: '/projects'
-      }
-    ]
-  },
+      ],
+      projectChips: [
+        {
+          label: 'TBD',
+          routerLink: '/projects'
+        }
+      ]
+    },
     {
       title: 'SQL Server',
       subTitle: '3+ years',
-      url: 'assets/svg/t-sql.svg',
+      url: ['assets/svg/t-sql.svg'],
       description:
-      `<ul>
+        `<ul>
           <li>3+ years experience working with SQL</li>
           <li>Was the main SQL dev for RSM and wrote SPROCS/tables/views/scripts for code at EZfacility</li>
       </ul>`,
@@ -364,9 +364,9 @@ export class SkillsComponent implements OnInit {
     {
       title: 'ASP.NET',
       subTitle: '3+ years',
-      url: 'assets/svg/microsoft-net.svg',
+      url: ['assets/svg/microsoft-net.svg'],
       description:
-      `<ul>
+        `<ul>
           <li>3+ years experience as an ASP.NET developer</li>
           <li>Worked on WebForms and MVC projects</li>
           <li>Primarily for EZfacility, the main site was done in WebForms(aspx) and out self-service site was done using MVC</li>
@@ -429,9 +429,9 @@ export class SkillsComponent implements OnInit {
     {
       title: 'SSRS',
       subTitle: '2+ years',
-      url: 'assets/svg/t-sql.svg',
+      url: ['assets/svg/t-sql.svg'],
       description:
-      `<ul>
+        `<ul>
           <li>2+ years experience working with SSRS</li>
           <li>Was the main SQL dev for RSM</li>
       </ul>`,
@@ -489,9 +489,9 @@ export class SkillsComponent implements OnInit {
     {
       title: 'WPF/MVVM',
       subTitle: '2+ years',
-      url: 'assets/svg/microsoft-windows-22.svg',
+      url: ['assets/svg/microsoft-windows-22.svg'],
       description:
-      `<ul>
+        `<ul>
           <li>2+ years experience building WPF desktop applications primarily for RSM</li>
           <li>Created several desktop applications to handle various manufacturing floor applications</li>
           <li>Automation of tasks on the manufacturing floor</li>
@@ -526,7 +526,7 @@ export class SkillsComponent implements OnInit {
     {
       title: 'Angular',
       subTitle: '2+ years',
-      url: 'assets/svg/angular-icon.svg',
+      url: ['assets/svg/angular-icon.svg'],
       description:
         `<ul>
             <li>2+ years working on Angular SPA's primarily for EZfacility</li>
@@ -567,7 +567,7 @@ export class SkillsComponent implements OnInit {
     {
       title: 'Ngrx',
       subTitle: '2+ years',
-      url: 'assets/svg/ngrx.svg',
+      url: ['assets/svg/ngrx.svg'],
       description:
         `<ul>
             <li>2+ years working on Angular SPA's using Ngrx to manage redux state primarily for EZfacility</li>
@@ -602,7 +602,7 @@ export class SkillsComponent implements OnInit {
     {
       title: 'AWS',
       subTitle: '1+ Year',
-      url: 'assets/svg/aws-2.svg',
+      url: ['assets/svg/aws-2.svg'],
       description:
         `<ul>
             <li>1+ years working for EZFacility</li>
@@ -622,9 +622,9 @@ export class SkillsComponent implements OnInit {
     {
       title: 'Bash',
       subTitle: '3+ years',
-      url: 'assets/svg/bash-1.svg',
+      url: ['assets/svg/bash-1.svg'],
       description:
-      `<ul>
+        `<ul>
           <li>3+ years wrirting Bash scripts for various projects</li>
           <li>Created most of the custom build scripts and .bashrc files used for EZUI</li>
           <li>Created scripts to handle custom cultures</li>

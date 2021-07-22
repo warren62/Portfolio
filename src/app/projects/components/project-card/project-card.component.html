@@ -1,0 +1,21 @@
+<app-card
+  class="content"
+  [cardModel]="{
+    title: card.title,
+    subTitle: card.subTitle,
+    description: card.description,
+    url: card.url,
+    shareUrl: card.shareUrl
+  }"
+>
+  <div *ngIf="card.technologyChips.length > 0">
+    <p>Skills</p>
+    <mat-chip-list aria-label="Fish selection">
+      <mat-chip
+        *ngFor="let chip of card.technologyChips"
+        routerLink="{{ chip.routerLink }}"
+        >{{ chip.label }}</mat-chip
+      >
+    </mat-chip-list>
+  </div>
+</app-card>
